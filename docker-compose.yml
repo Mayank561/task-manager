@@ -4,10 +4,8 @@ services:
     build: .
     ports:
       - "8000:8000"
-    environment:
-      - PORT=8000
-      - MONGO_URI=mongodb+srv://mayankguptaedu:eNyLWgZV1iybnzlV@cluster0.brcek.mongodb.net/?retryWrites=true&w=majority
-      - JWT_SECRET=Mayank
+    env_file:
+      - .env
     networks:
       - app-network
 
